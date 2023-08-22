@@ -1,0 +1,71 @@
+@media(max-width: 1240px){
+    
+    .navbar{
+        max-width: 768px;
+    }
+
+    .main{
+        margin: auto;
+        max-width: 768px;
+
+        img{
+            width: 768px;       
+        }
+
+        .list{
+            width: 768px;
+            margin: auto;
+        }
+    }
+}
+
+@media(max-width: 768px){
+
+    .navbar{
+        max-width: 375px;
+
+        img{
+            width: 145px;
+            height: 46.88px;
+        }
+
+        nav{
+            justify-content: space-between;
+
+            ul{    
+                a{
+                    font-size: 16px;
+                }  
+            }
+        }
+    }
+
+    .main{
+        
+        max-width: 375px;
+
+        .banner{
+            max-width: 375px;
+            margin: auto;
+            
+            img{
+                width: 375px;
+                height: 111px;
+            }
+            
+            h1{
+                font-size: 16px;
+            }
+        }
+        
+        .list{
+            margin: auto;
+            background-color: white;
+            max-width: 375px;
+        }
+    }
+
+    .footer{
+        min-width: 375px;
+    }
+}
