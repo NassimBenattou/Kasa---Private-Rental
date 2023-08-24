@@ -22,6 +22,11 @@
 
             
         }
+
+        .error{
+            max-width: 768px;
+            margin: auto;
+        }
     }
 
 }
@@ -74,6 +79,10 @@
 
         .about{
             max-width: 375px;
+        }
+
+        .error{
+            min-width: 375px;
         }
     }
 
