@@ -68,4 +68,70 @@
             }
         }
     }
+
+    .about{
+        width: 1023px;
+        margin: auto;
+        margin-top: 70px;
+
+        .dropdown{
+            display: flex;
+            justify-content: space-between;
+            height: 52px;
+            background-color: #FF6060;
+            align-items: center;
+            border-radius: 5px;
+            cursor: pointer;
+
+            p{
+                color: white;
+                font-size: 24px;
+                margin-left: 15px;
+            }
+
+            img{
+                margin-right: 20px;
+                width: 32px;
+                transition: .5s;
+            }
+
+            @keyframes rotation {
+                from{
+                    transform: rotate(0deg);
+                    
+                }
+                to {
+                    transform: rotate(-180deg);
+                }
+            }
+    
+            @keyframes reverse {
+                from{
+                    transform: rotate(180deg);
+                    
+                }
+                to {
+                    transform: rotate(0deg);
+                }
+            }
+        }
+
+        .hideDiv{
+            
+            background-color: #F6F6F6;
+            text-align: left;
+            border-radius: 5px;
+            display: inline-block;
+            margin-bottom: 30px;
+
+            p{
+                color: #FF6060;
+                line-height: 30px;
+                margin-left: 15px;
+                margin-top: -20px; 
+                transition: opacity .1s;          
+            }
+
+        }
+    }
 }

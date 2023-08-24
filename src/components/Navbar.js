@@ -15,7 +15,7 @@ function Navbar() {
             <nav>
                 <ul>
                     <li><a onClick={() => link('/')}>Accueil</a></li>
-                    <li><a onClick={() => link('/apropos')}>A Propos</a></li>
+                    <li><a onClick={() => link('/apropos')}>À Propos</a></li>
                 </ul>
             </nav>
         </div>
