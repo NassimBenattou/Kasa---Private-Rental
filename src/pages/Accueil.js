@@ -3,23 +3,24 @@ import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 import Card from '../components/Card';
 import Banner from '../components/Banner';
-import data from '../data/data.json';
 import background from '../assets/background_main.png';
 import '../sass/Main.scss';
 import '../sass/Responsive.scss';
 
-function Accueil() {
+function Accueil(props) {
 
+  const getId = (id) => {
+
+    props.handleCallback(id);
+  }
+  
   return (
     <div>
       <Navbar />
         <div className='main'>
           <Banner background={background} title="Chez vous, partout et ailleurs" />
-          <div className='list'>
-            {data.map(({ title, id, cover }) => (
-              
-              <Card id={id} title={title} cover={cover} />
-            ))}
+          <div className='list'>  
+            <Card handleCallback={getId} />
           </div>
         </div>
       <Footer />
