@@ -28,19 +28,19 @@ function Slideshow() {
     
           setIndex(0);
         }
-      }
+    }
     
-      const lastPicture = (e) => {
-    
+    const lastPicture = (e) => {
+
         e.preventDefault();
-    
+
         setIndex(index-1);
-    
+
         if(index === 0){
-    
-          setIndex(dataPictures.length -1)
+
+            setIndex(dataPictures.length -1)
         }
-      }
+    }
 
     return (
         <>

@@ -1,5 +1,5 @@
 import React,  { useEffect, useState } from 'react';
-import { useParams } from "react-router-dom";
+import { useParams, Navigate, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Slideshow from '../components/Slideshow';
 import Rating from '../components/Rating';
@@ -17,18 +17,27 @@ function Appartement() {
   const [dataEquipements, setDataEquipements] = useState([]);
 
   const { id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
 
-    const datas = data.filter(element => element.id.includes(id));
+    try{
 
-    setDataName(datas[0].host.name);
-    
-    setProfilPicture(datas[0].host.picture);
+      const datas = data.filter(element => element.id.includes(id));
+  
+      setDataName(datas[0].host.name);
+      
+      setProfilPicture(datas[0].host.picture);
+  
+      setDataEquipements(datas[0].equipments);
+  
+      setDataId(...datas, dataId);
+    }
+    catch(error){
+      console.log(error);
+      navigate("/404");
+    }
 
-    setDataEquipements(datas[0].equipments);
-
-    setDataId(...datas, dataId);
 
   }, [dataId]);
 

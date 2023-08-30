@@ -16,7 +16,7 @@ function Card(props) {
     const redirect = (e) => {
 
         e.preventDefault();
-
+        
         navigate(`/appartement/${e.target.id}`);
     }
 

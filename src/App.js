@@ -1,20 +1,26 @@
-import {
-  BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import React, { useState } from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { useNavigate } from 'react-router';
+import React, { useState, useEffect } from "react";
 import Accueil from './pages/Accueil';
 import Apropos from './pages/Apropos';
 import Appartement from './pages/Appartement';
-import Error from './pages/Error'; 
-import './App.css';
+import Error from './pages/Error';
+import data from './data/data.json';
 
 function App() {
 
   const [id, setId] = useState('');
 
-  const getId = (id) => {
+  useEffect(() => {
+
+   
+
+  });
+
+  const getId = (id) => { 
 
     setId(id);
-  } 
+  }
 
   return (
     <div className="App">
