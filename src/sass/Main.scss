@@ -208,6 +208,16 @@
             z-index: 1;     
             cursor: pointer;       
         }
+
+        p{
+            position: absolute;
+            z-index: 1;
+            bottom: 0;
+            left: 50%;
+            color: white;
+            font-size: 18px;
+            font-family: 'Montserrat';
+        }
     }
 
     .infos{

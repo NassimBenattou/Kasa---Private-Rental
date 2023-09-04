@@ -1,6 +1,6 @@
 import React from 'react';
 import data from '../data/data.json';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 function Card(props) {
 
@@ -8,16 +8,19 @@ function Card(props) {
 
     const getId = (e) => {
 
+    
         e.preventDefault();
 
         props.handleCallback(e.target.id);
     }
-
+    
     const redirect = (e) => {
-
+        
         e.preventDefault();
         
         navigate(`/appartement/${e.target.id}`);
+        
+        //<Link to={`/appartement/${e.target.id}`} />
     }
 
     return (

@@ -40,12 +40,12 @@ function Appartement() {
 
 
   }, [dataId]);
-
+  
   return (
     <>
       <Navbar />
         <div className='main'>
-          <Slideshow />
+          <Slideshow id={id} />
           <div className='infos'>
             <div className='title'>
               <h1>{dataId.title}</h1>
