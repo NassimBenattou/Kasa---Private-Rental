@@ -22,6 +22,11 @@
     
     .navbar{
         max-width: 768px;
+        align-items: center;
+
+        nav a{
+            font-size: 18px;   
+        }  
     }
 
     .main{

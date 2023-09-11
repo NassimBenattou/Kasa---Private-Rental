@@ -1,22 +1,28 @@
 import React from 'react';
+import { NavLink } from "react-router-dom";
+import logo from '../assets/logo.png';
 import '../sass/Navbar.scss';
 import '../sass/Responsive.scss';
-import logo from '../assets/logo.png';
-import { useNavigate } from 'react-router-dom';
 
 
 function Navbar() {
-    
-    const link = useNavigate();
 
     return (
         <div className='navbar'>
             <img src={logo} alt="logo"/>
             <nav>
-                <ul>
-                    <li><a onClick={() => link('/')}>Accueil</a></li>
-                    <li><a onClick={() => link('/apropos')}>À Propos</a></li>
-                </ul>
+                <NavLink to="/" style={({ isActive }) => {
+                        return {
+                        textDecoration: isActive ? "underline" : "",
+                        };
+                    }}>Accueil
+                </NavLink>
+                <NavLink to="/apropos" style={({ isActive }) => {
+                        return {
+                        textDecoration: isActive ? "underline" : "",
+                        };
+                    }}>A Propos
+                </NavLink>
             </nav>
         </div>
     )

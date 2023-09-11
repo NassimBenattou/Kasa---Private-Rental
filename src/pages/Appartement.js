@@ -1,5 +1,5 @@
 import React,  { useEffect, useState } from 'react';
-import { useParams, Navigate, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import Navbar from '../components/Navbar';
 import Slideshow from '../components/Slideshow';
 import Rating from '../components/Rating';
@@ -29,7 +29,7 @@ function Appartement() {
       
       setProfilPicture(datas[0].host.picture);
   
-      setDataEquipements(datas[0].equipments);
+      setDataEquipements(datas[0].equipments.join(', '));
   
       setDataId(...datas, dataId);
     }
@@ -60,7 +60,7 @@ function Appartement() {
             <div className="host">
               <div className='name'>
                   <p>{dataName}</p>
-                  <img src={profilPicture} />
+                  <img src={profilPicture} alt='...' />
               </div>
               <div className="rating">
 
