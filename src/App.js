@@ -8,11 +8,7 @@ import Error from './pages/Error';
 function App() {
 
   const [id, setId] = useState('');
-
-    useEffect(() => {
-
-  });
-
+  
   const getId = (id) => { 
 
     setId(id);

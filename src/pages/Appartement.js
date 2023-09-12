@@ -34,7 +34,7 @@ function Appartement() {
       setDataId(...datas, dataId);
     }
     catch(error){
-      console.log(error);
+
       navigate("/404");
     }
 

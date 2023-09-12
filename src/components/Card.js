@@ -19,8 +19,6 @@ function Card(props) {
         e.preventDefault();
         
         navigate(`/appartement/${e.target.id}`);
-        
-        //<Link to={`/appartement/${e.target.id}`} />
     }
 
     return (
